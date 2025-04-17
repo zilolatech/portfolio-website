@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.left-bg {
+    height: 400px;
+    width: 700px;
+    margin-top: -100px;
+    margin-left: -250px;
+}
+
+.right-bg {
+    height: 120vh;
+    width: 100%;
+    margin-top: -200px;
+    margin-left: 600px;
+}
