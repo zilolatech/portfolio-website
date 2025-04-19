@@ -15,3 +15,20 @@
     margin-top: -200px;
     margin-left: 600px;
 }
+
+:root {
+    --primary: 99, 171, 169;
+    --background1: 255, 255, 255;
+    --background2: 236, 236, 236;
+    --text: 0, 0, 0;
+    --accent: 76, 73, 76;
+}
+
+.dark {
+    --primary: 99, 171, 169;
+    --background1: 60, 60, 60;
+    --background2: 33, 33, 33;
+    --text: 255, 255, 255;
+    --accent: 76, 73, 76;
+}
+        
