@@ -24,8 +24,11 @@ const App = () => {
       <div className='h-screen text-text bg-background1 relative z-40'>
         <div className='relative z-10 h-10 bg-primary'>
           Hello
-          <div className=''>
-            <button onClick={changeTheme}>Switch Theme</button>
+          <div className='inline-block float-right mt-2'>
+            <div className='inline px-3'>Projects</div>
+            <div className='inline px-3 py-1 bg-accent text-slate-200 rounded-2xl'>
+              <button className='text-sm' onClick={changeTheme}>Switch Theme</button>
+            </div>
           </div>
         </div>
         <div className='absolute left-bg z-0 -rotate-45 bg-background2'></div>
@@ -57,7 +60,7 @@ const App = () => {
       <div className='h-screen'>
         <div>
           <div className='absolute z-10 ml-32 mt-16 h-[85%] w-[36%] bg-primary'>
-          Projects
+          <p className='text-3xl m-6'>Projects</p>
         </div>
         <div className='absolute z-10 mt-16 ml-[50%]'>
           <div className='text-3xl mt-32 ml-28'>Technical Skills</div>
@@ -75,7 +78,7 @@ const App = () => {
               <p className='my-1'>Tailwind CSS</p>
             </div>
           </div>
-          <div className='text-3xl mt-32 ml-28'>Languages</div>
+          <div className='text-3xl mt-28 ml-28'>Languages</div>
           <div className='ml-28 mt-8'>English C1 (IELTS Academic)</div>
         </div>
         </div>
