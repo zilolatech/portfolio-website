@@ -16,6 +16,13 @@
     margin-left: 600px;
 }
 
+.right-bg2 {
+    height: 60%;
+    width: 200%;
+    margin-top: -200px;
+    margin-left: -150px;
+}
+
 :root {
     --primary: 99, 171, 169;
     --background1: 255, 255, 255;
@@ -25,9 +32,9 @@
 }
 
 .dark {
-    --primary: 99, 171, 169;
-    --background1: 60, 60, 60;
-    --background2: 33, 33, 33;
+    --primary: 67, 124, 124;
+    --background2: 44, 44, 50;
+    --background1: 33, 33, 38;
     --text: 255, 255, 255;
     --accent: 76, 73, 76;
 }
