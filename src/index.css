@@ -2,9 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --primary: 99, 171, 169;
+    --background1: 255, 255, 255;
+    --background2: 236, 236, 236;
+    --text: 0, 0, 0;
+    --accent: 76, 73, 76;
+}
+
+.dark {
+    --primary: 67, 124, 124;
+    --background2: 44, 44, 50;
+    --background1: 33, 33, 38;
+    --text: 255, 255, 255;
+    --accent: 76, 73, 76;
+}
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 1px;
 }
 
 .left-bg {
@@ -28,22 +49,6 @@ html, body {
     margin-top: -200px;
     margin-left: -150px;
     background: linear-gradient(45deg, transparent 400px, rgb(var(--background2)) 0);
-}
-
-:root {
-    --primary: 99, 171, 169;
-    --background1: 255, 255, 255;
-    --background2: 236, 236, 236;
-    --text: 0, 0, 0;
-    --accent: 76, 73, 76;
-}
-
-.dark {
-    --primary: 67, 124, 124;
-    --background2: 44, 44, 50;
-    --background1: 33, 33, 38;
-    --text: 255, 255, 255;
-    --accent: 76, 73, 76;
 }
 
 /* @keyframes appear {
