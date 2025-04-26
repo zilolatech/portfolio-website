@@ -23,7 +23,7 @@ const App = () => {
   return (
     <>
       <div className='h-screen text-text bg-background1 relative z-20'>
-        <div className='relative z-10 h-10 bg-primary'>
+        <div className={`relative z-10 h-10 bg-${!isDarkMode ? 'primary' : 'background2'}`}>
           Hello
           <div className='inline-block float-right mt-2'>
             <div className='inline px-3'>Projects</div>
@@ -32,8 +32,8 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className='absolute left-bg z-0 -rotate-45 bg-background2'></div>
-        <div className='absolute right-bg z-0 rotate-45 bg-background2'></div>
+        <div className={`absolute left-bg z-0 -rotate-45 ${!isDarkMode ? 'bg-background2' : 'hidden'}`}></div>
+        <div className={`absolute right-bg z-0 rotate-45 ${!isDarkMode ? 'bg-background2' : 'hidden'}`}></div>
         <div className='absolute z-10 flex ml-64 mt-32 h-96'>
           <div>
             <div className='text-4xl'>Zilola</div>
@@ -55,10 +55,10 @@ const App = () => {
         </div>
         <div className='absolute z-10 inset-x-0 bottom-3'>
           <p className='text-center'>Skills and Projects</p>
-          <img src='/icons/down-arrow.svg' className='h-10 m-auto'></img>
+          <img src={`/icons/${!isDarkMode ? 'down-arrow.svg' : 'down-arrow2.svg'}`} className='h-10 m-auto'></img>
         </div>
       </div>
-      <SkillsAndProjects />
+      <SkillsAndProjects isDarkMode={isDarkMode} />
     </>
   )
 }

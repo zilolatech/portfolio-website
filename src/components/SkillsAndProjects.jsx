@@ -1,10 +1,10 @@
 import React from 'react'
 
-const SkillsAndProjects = () => {
+const SkillsAndProjects = ( {isDarkMode} ) => {
 
   return (
     <>
-    <div className='h-screen bg-background1'>
+    <div className='h-screen bg-background1 text-text'>
         <div className=''>
           <div className='absolute z-20 ml-32 mt-16 h-[85%] w-[36%] bg-primary'>
             <img src='/icons/full-screen.svg' className='opacity-10 hover:h-8 hover:m-2 hover:opacity-40 float-right h-6 m-3'></img>
@@ -30,7 +30,7 @@ const SkillsAndProjects = () => {
             <div className='ml-28 mt-8'>English C1 (IELTS Academic)</div>
           </div>
         </div>
-        <div className='absolute right-bg2 z-10 -rotate-45 bg-background2'></div>
+        <div className={`absolute right-bg2 z-10 -rotate-45 ${!isDarkMode ? 'bg-background2' : 'hidden'}`}></div>
         
       </div>
       </>
