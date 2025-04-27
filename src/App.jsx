@@ -3,6 +3,7 @@ import SkillsAndProjects from './components/SkillsAndProjects'
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false)
+  const [opacity, setOpacity] = useState(1)
 
   useEffect(() => {
     const selecredTheme = localStorage.getItem('theme')
@@ -19,6 +20,16 @@ const App = () => {
     localStorage.setItem('theme', newTheme ? 'dark' : 'light')
     document.documentElement.className = newTheme ? 'dark' : 'light'
   }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY || document.documentElement.scrollTop
+      const newOpacity = Math.max(0, 1 - scrollY/200)
+      setOpacity(newOpacity)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <>
@@ -53,7 +64,7 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className='absolute z-10 inset-x-0 bottom-3'>
+        <div className='fixed z-10 inset-x-0 bottom-3' style={{transition: 'opacity 0.3s ease', opacity: opacity, pointerEvents: opacity === 0 ? 'none' : 'auto'}}>
           <p className='text-center'>Skills and Projects</p>
           <img src={`/icons/${!isDarkMode ? 'down-arrow.svg' : 'down-arrow2.svg'}`} className='h-10 m-auto'></img>
         </div>
