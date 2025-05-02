@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import SkillsAndProjects from './components/SkillsAndProjects'
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false)
   const [opacity, setOpacity] = useState(1)
   const [backgroundPosition, setBackgroundPosition] = useState('-50px')
+  const scrollLocked = useRef(false)
+  const scrollLimit = 820
 
   useEffect(() => {
     const selecredTheme = localStorage.getItem('theme')
@@ -25,11 +27,21 @@ const App = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop
+      if (scrollLocked.current && scrollY > scrollLimit) {
+        window.scrollTo(0, scrollLimit)
+        return
+      }
       const newOpacity = Math.max(0, 1 - scrollY/200)
       setOpacity(newOpacity)
       const scrollProgress = Math.min(1, scrollY/800)
       const newBackgroundPosition = `${-50 - (scrollProgress*150)}px`
       setBackgroundPosition(newBackgroundPosition)
+
+      if (scrollY >= scrollLimit && !scrollLocked.current) {
+        scrollLocked.current = true
+      } else if (scrollY < scrollLimit && scrollLocked.current) {
+        scrollLocked.current = false
+      }
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
