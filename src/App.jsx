@@ -4,6 +4,7 @@ import SkillsAndProjects from './components/SkillsAndProjects'
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false)
   const [opacity, setOpacity] = useState(1)
+  const [backgroundPosition, setBackgroundPosition] = useState('-50px')
 
   useEffect(() => {
     const selecredTheme = localStorage.getItem('theme')
@@ -26,6 +27,9 @@ const App = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop
       const newOpacity = Math.max(0, 1 - scrollY/200)
       setOpacity(newOpacity)
+      const scrollProgress = Math.min(1, scrollY/800)
+      const newBackgroundPosition = `${-50 - (scrollProgress*150)}px`
+      setBackgroundPosition(newBackgroundPosition)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -69,7 +73,7 @@ const App = () => {
           <img src={`/icons/${!isDarkMode ? 'down-arrow.svg' : 'down-arrow2.svg'}`} className='h-10 m-auto'></img>
         </div>
       </div>
-      <SkillsAndProjects isDarkMode={isDarkMode} />
+      <SkillsAndProjects isDarkMode={isDarkMode} backgroundPosition={backgroundPosition} />
     </>
   )
 }

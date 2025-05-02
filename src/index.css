@@ -47,7 +47,7 @@ html, body {
 .right-bg2 {
     height: 60%;
     width: 200%;
-    margin-top: -200px;
+    /* margin-top: -200px; */
     margin-left: -150px;
     background: linear-gradient(45deg, transparent 400px, rgb(var(--background2)) 0);
 }
