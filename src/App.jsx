@@ -51,7 +51,6 @@ const App = () => {
     <>
       <div className='h-screen text-text bg-background1 relative z-20'>
         <div className={`relative z-10 h-10 bg-${!isDarkMode ? 'primary' : 'background2'}`}>
-          Hello
           <div className='inline-block float-right mt-2'>
             <div className='inline px-3'>Projects</div>
             <div className='inline px-3 py-1 bg-accent text-slate-200 rounded-2xl'>
@@ -63,19 +62,17 @@ const App = () => {
         <div className={`absolute right-bg z-0 rotate-45 ${!isDarkMode ? 'bg-background2' : 'hidden'}`}></div>
         <div className='absolute z-10 flex ml-64 mt-32 h-96'>
           <div>
-            <div className='text-4xl'>Zilola</div>
-            <div className='text-4xl'>[Surname]</div>
-            <div className='text-2xl mt-1'>React.js Developer</div>
-            <div className='w-96 mt-4'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat eos tempora debitis inventore voluptas maxime, dolore iste quam nam. Nisi eius labore, dolore fugiat hic impedit id optio suscipit asperiores.</div>
+            <div className='text-7xl'>Zilola</div>
+            <div className='w-96 mt-7 text-lg'>React.js Developer with strong foundation in JavaScript, HTML, CSS, and modern web development frameworks, as well as experienced in building responsive and user-friendly applictions.</div>
           </div>
-          <div className='h-[90%] w-64 bg-primary ml-32 mt-9 p-6'>
+          <div className='h-[94%] w-72 bg-primary ml-32 mt-9 p-6'>
             <div className='text-3xl mt-3'>Contacts</div>
             <div className='mt-3'>
-              <div>placeholder@gmail.com</div>
-              <div>linkedin.com/in/</div>
-              <div>github.com</div>
+              <div className='my-1'>zilolatech@gmail.com</div>
+              <div className='my-1'>linkedin.com/in/zilolatech/</div>
+              <div className='my-1'>github.com/zilolatech</div>
             </div>
-            <div className='mt-28 py-3 bg-accent rounded-2xl'>
+            <div className='mt-[52%] py-3 bg-accent rounded-2xl'>
               <p className='text-slate-200 text-center'>Download Resume</p>
             </div>
           </div>
