@@ -13,16 +13,16 @@ const SkillsAndProjects = ( {isDarkMode, backgroundPosition} ) => {
             <div className='text-3xl mt-32 ml-28'>Technical Skills</div>
             <div className='flex mt-10 ml-28'>
               <div>
-                <p className='my-1'>JavaScript</p>
-                <p className='my-1'>HTML</p>
-                <p className='my-1'>CSS</p>
-                <p className='my-1'>React.js</p>
+                <p className='my-1 flex'><img src='/icons/javascript.svg' width='20px' className='mr-2'></img>JavaScript</p>
+                <p className='my-2 flex'><img src='/icons/html5.svg' width='20px' className='mr-2'></img>HTML</p>
+                <p className='my-2 flex'><img src='/icons/css.svg' width='20px' className='mr-2'></img>CSS</p>
+                <p className='my-2 flex'><img src='/icons/react-js.svg' width='20px' className='mr-2'></img>React.js</p>
               </div>
               <div className='ml-16'>
-                <p className='my-1'>Python</p>
-                <p className='my-1'>Node.js</p>
-                <p className='my-1'>Next.js</p>
-                <p className='my-1'>Tailwind CSS</p>
+                <p className='my-1 flex'><img src='/icons/python.svg' width='20px' className='mr-2'></img>Python</p>
+                <p className='my-2 flex'><img src='/icons/node-js.svg' width='20px' className='mr-2'></img>Node.js</p>
+                <p className='my-2 flex'><img src='/icons/next-js.svg' width='20px' className='mr-2 z-10'></img><div className='bg-white ml-[-28px] w-5 h-4 mt-1 z-0 rounded-xl mr-2'></div>Next.js</p>
+                <p className='my-2 flex'><img src='/icons/tailwind-css.svg' width='20px' className='mr-2'></img>Tailwind CSS</p>
               </div>
             </div>
             <div className='text-3xl mt-28 ml-28'>Languages</div>
