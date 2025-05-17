@@ -6,7 +6,7 @@ const SkillsAndProjects = ( {isDarkMode, backgroundPosition} ) => {
 
   return (
     <>
-    <div className='h-screen bg-background1 text-text'>
+    <div className='h-screen bg-background1 text-text' id='skillsAndProjects'>
         <div>
           <Projects />
           <div className='absolute z-20 mt-16 ml-[50%]'>

@@ -79,7 +79,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className='fixed z-10 inset-x-0 bottom-3' style={{transition: 'opacity 0.3s ease', opacity: opacity, pointerEvents: opacity === 0 ? 'none' : 'auto'}}>
-          <p className='text-center'>Skills and Projects</p>
+          <p className='text-center'><a href='#skillsAndProjects'>Skills and Projects</a></p>
           <img src={`/icons/${!isDarkMode ? 'down-arrow.svg' : 'down-arrow2.svg'}`} className='h-10 m-auto'></img>
         </div>
       </div>

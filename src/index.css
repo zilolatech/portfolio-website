@@ -27,6 +27,7 @@ html, body {
     font-weight: 300;
     font-style: normal;
     letter-spacing: 1px;
+    scroll-behavior: smooth;
 }
 
 .left-bg {
