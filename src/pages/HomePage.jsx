@@ -2,21 +2,21 @@ import React, { useEffect, useRef, useState } from 'react'
 import SkillsAndProjects from '../components/SkillsAndProjects'
 import { Link } from 'react-router-dom'
 
-const HomePage = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false)
+const HomePage = ({isDarkMode, setIsDarkMode}) => {
+  // const [isDarkMode, setIsDarkMode] = useState(false)
   const [opacity, setOpacity] = useState(1)
   const [backgroundPosition, setBackgroundPosition] = useState('-50px')
   const scrollLocked = useRef(false)
   const scrollLimit = 820
 
-  useEffect(() => {
-    const selecredTheme = localStorage.getItem('theme')
-    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const initialTheme = selecredTheme ? selecredTheme == 'dark' : systemDark
+  // useEffect(() => {
+  //   const selecredTheme = localStorage.getItem('theme')
+  //   const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+  //   const initialTheme = selecredTheme ? selecredTheme == 'dark' : systemDark
 
-    setIsDarkMode(initialTheme)
-    document.documentElement.className = initialTheme ? 'dark' : 'light'
-  }, [])
+  //   setIsDarkMode(initialTheme)
+  //   document.documentElement.className = initialTheme ? 'dark' : 'light'
+  // }, [])
 
   const changeTheme = () => {
     const newTheme = !isDarkMode

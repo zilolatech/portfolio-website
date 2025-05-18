@@ -29,7 +29,7 @@ const SkillsAndProjects = ( {isDarkMode, backgroundPosition} ) => {
             <div className='ml-28 mt-8'>English C1 (IELTS Academic)</div>
           </div>
         </div>
-        <div className={`absolute right-bg2 z-10 -rotate-45 ${!isDarkMode ? 'bg-background2' : 'hidden'}`} style={{transition: 'all 0.3s ease', marginTop: backgroundPosition}}></div>
+        <div className={`absolute right-bg2 z-10 -rotate-45 ml-[-150px] ${!isDarkMode ? 'bg-background2' : 'hidden'}`} style={{transition: 'all 0.3s ease', marginTop: backgroundPosition}}></div>
         
       </div>
       </>
