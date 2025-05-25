@@ -3,7 +3,7 @@ import React from 'react'
 const ProjectsPage = ({isDarkMode}) => {
   return (
     <>
-      <div className='text-text bg-background1 md:h-[100vh] mb-10 md:mb-0'>
+      <div className='text-text bg-background1 md:h-[100vh] pb-10 md:pb-0'>
         <div className='md:ml-10 ml-5 md:pt-5 pt-3 text-3xl z-10'>Projects</div>
         <div className='md:flex mt-10 justify-center z-10'>
           <div className='rounded-md md:rounded-none z-20 mt-10 h-[60vh] md:w-[25%] mx-10 hover:h-[70vh] hover:w-[30%] hover:mt-4 hover:mx-1 bg-primary'>
@@ -51,7 +51,7 @@ const ProjectsPage = ({isDarkMode}) => {
             </div>
           </div>
         </div>
-        <div className={`hidden md:inline fixed right-bg2 z-0 -rotate-45 ${!isDarkMode ? 'bg-background2' : 'hidden'}`} style={{top: '500px', right: '-700px'}}></div>
+        <div className={`hidden md:inline fixed right-bg2 z-0 -rotate-45 ${!isDarkMode ? 'bg-background2' : 'md:hidden'}`} style={{top: '500px', right: '-700px'}}></div>
       </div>
     </>
   )

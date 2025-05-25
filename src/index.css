@@ -53,57 +53,14 @@ html, body {
     background: linear-gradient(45deg, transparent 400px, rgb(var(--background2)) 0);
 }
 
-/* @keyframes appear {
-    from {
-        opacity: 0;
-        scale: 0.5;
-    } to {
-        opacity: 1;
-        scale: 1;
-    }
+/* .arrow-animation {
+    animation-name: arrowAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
-.projects {
-    opacity: 0;
-    scale: 0.5;
-    transition: all 0.6s ease-out;
-
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-}
-
-@supports (animation-timeline: view()) {
-    .projects {
-        animation: appear linear;
-        animation-timeline: view();
-        animation-range: entry 0% cover 40%;
-        animation-duration: 2ms;
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .projects {
-        opacity: 1;
-        scale: 1;
-        transition: all 0.6s ease-out;
-    }
-} */
-
-/* .box {
-    animation: scrollAnimation;
-    animation-timeline: view(40%);
-}
-
-@keyframes scrollAnimation {
-   from {
-    opacity: 0;
-    transform: translateY(200px) scale(0.3);
-   } 
-   to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-   }
+@keyframes arrowAnimation {
+  0% {margin-top: 240px;}
+  50% {margin-top: 235px;}
+  100% {margin-top: 240px;}
 } */

@@ -9,6 +9,8 @@ const HomePage = ({isDarkMode, setIsDarkMode}) => {
   const scrollLocked = useRef(false)
   const scrollLimit = 820
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   // useEffect(() => {
   //   const selecredTheme = localStorage.getItem('theme')
   //   const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -52,33 +54,52 @@ const HomePage = ({isDarkMode, setIsDarkMode}) => {
     <>
       <div className='h-screen text-text bg-background1 relative z-20'>
         <div className={`relative z-10 h-10 bg-${!isDarkMode ? 'primary' : 'background2'}`}>
-          <div className='inline-block float-right mt-2'>
+
+          <div>
+            <button className='inline-block md:hidden px-4 py-2' onClick={() => setIsMenuOpen(!isMenuOpen)}><img src={isMenuOpen ? "/icons/cancel.svg" : "/icons/menu.svg"} width="24px"/></button>
+          </div>
+
+          <div className='hidden md:inline-block float-right mt-2'>
             <Link to='/projects'><div className='inline px-3'>Projects</div></Link>
             <div className='inline px-3 py-1 bg-accent text-slate-200 rounded-2xl'>
               <button className='text-sm' onClick={changeTheme}>Switch Theme</button>
             </div>
           </div>
         </div>
-        <div className={`absolute left-bg z-0 -rotate-45 ${!isDarkMode ? 'bg-background2' : 'hidden'}`}></div>
-        <div className={`absolute right-bg z-0 rotate-45 ${!isDarkMode ? 'bg-background2' : 'hidden'}`}></div>
-        <div className='absolute z-10 flex ml-64 mt-32 h-96'>
-          <div>
-            <div className='text-7xl'>Zilola</div>
-            <div className='w-96 mt-7 text-lg'>React.js Developer with strong foundation in JavaScript, HTML, CSS, and modern web development frameworks, as well as experienced in building responsive and user-friendly applictions.</div>
+
+        <div className={`${isMenuOpen ? '' : 'hidden'} bg-${!isDarkMode ? 'neutral-200' : 'background2'}`}>
+            <ul className='md:hidden'>
+              <li className='p-2'>
+                <Link to='/projects'><div className='inline px-3'>Projects</div></Link>
+              </li>
+              <li className='p-2'>
+                <div className='inline px-3 py-1 bg-accent text-slate-200 rounded-2xl'>
+                  <button className='text-sm' onClick={changeTheme}>Switch Theme</button>
+                </div>
+              </li>
+            </ul>
           </div>
-          <div className='h-[94%] w-72 bg-primary ml-32 mt-9 p-6'>
-            <div className='text-3xl mt-3'>Contacts</div>
+
+        <div className={`md:inline hidden absolute left-bg z-0 -rotate-45 ${!isDarkMode ? 'bg-background2' : 'md:hidden'}`}></div>
+        <div className={`md:inline hidden absolute right-bg z-0 rotate-45 ${!isDarkMode ? 'bg-background2' : 'md:hidden'}`}></div>
+        <div className='md:absolute z-10 md:flex md:ml-64 md:mt-32 mx-10 h-96'>
+          <div>
+            <div className='md:text-7xl text-6xl mt-16 md:mt-0 ml-16 md:ml-0'>Zilola</div>
+            <div className='md:w-96 mt-7 text-lg'>React.js Developer with strong foundation in JavaScript, HTML, CSS, and modern web development frameworks, as well as experienced in building responsive and user-friendly applictions.</div>
+          </div>
+          <div className='md:h-[94%] md:w-72 bg-primary md:ml-32 mt-12 md:mt-9 p-6'>
+            <div className='text-3xl md:mt-3'>Contacts</div>
             <div className='mt-3'>
               <div className='my-1'>zilolatech@gmail.com</div>
               <div className='my-1'>linkedin.com/in/zilolatech/</div>
               <div className='my-1'>github.com/zilolatech</div>
             </div>
-            <div className='mt-[52%] py-3 bg-accent rounded-2xl'>
+            <div className='mt-8 md:mt-[52%] py-3 bg-accent rounded-2xl'>
               <p className='text-slate-200 text-center'>Download Resume</p>
             </div>
           </div>
         </div>
-        <div className='fixed z-10 inset-x-0 bottom-3' style={{transition: 'opacity 0.3s ease', opacity: opacity, pointerEvents: opacity === 0 ? 'none' : 'auto'}}>
+        <div className='md:fixed z-10 inset-x-0 mt-60 md:bottom-3 arrow-animation' style={{transition: 'opacity 0.3s ease', opacity: opacity, pointerEvents: opacity === 0 ? 'none' : 'auto'}}>
           <p className='text-center'><a href='#skillsAndProjects'>Skills and Projects</a></p>
           <img src={`/icons/${!isDarkMode ? 'down-arrow.svg' : 'down-arrow2.svg'}`} className='h-10 m-auto'></img>
         </div>
