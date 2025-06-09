@@ -13,16 +13,16 @@ const SkillsAndProjects = ( {isDarkMode, backgroundPosition} ) => {
             <div className='text-3xl md:mt-32 ml-7 md:ml-28'>Technical Skills</div>
             <div className={`flex mt-6 pl-7 md:ml-28 ${isDarkMode && 'bg-background1'}`}>
               <div>
-                <p className='my-1 flex'><img src='/icons/javascript.svg' width='20px' className='mr-2'></img>JavaScript</p>
-                <p className='my-2 flex'><img src='/icons/html5.svg' width='20px' className='mr-2'></img>HTML</p>
-                <p className='my-2 flex'><img src='/icons/css.svg' width='20px' className='mr-2'></img>CSS</p>
-                <p className='my-2 flex'><img src='/icons/react-js.svg' width='20px' className='mr-2'></img>React.js</p>
+                <div className='my-1 flex'><img src='/icons/javascript.svg' width='20px' className='mr-2'></img>JavaScript</div>
+                <div className='my-2 flex'><img src='/icons/html5.svg' width='20px' className='mr-2'></img>HTML</div>
+                <div className='my-2 flex'><img src='/icons/css.svg' width='20px' className='mr-2'></img>CSS</div>
+                <div className='my-2 flex'><img src='/icons/react-js.svg' width='20px' className='mr-2'></img>React.js</div>
               </div>
               <div className='ml-16'>
-                <p className='my-1 flex'><img src='/icons/python.svg' width='20px' className='mr-2'></img>Python</p>
-                <p className='my-2 flex'><img src='/icons/node-js.svg' width='20px' className='mr-2'></img>Node.js</p>
-                <p className='my-2 flex'><img src='/icons/next-js.svg' width='20px' className='mr-2 z-10'></img><div className='bg-white ml-[-28px] w-5 h-4 mt-1 z-0 rounded-xl mr-2'></div>Next.js</p>
-                <p className='my-2 flex'><img src='/icons/tailwind-css.svg' width='20px' className='mr-2'></img>Tailwind CSS</p>
+                <div className='my-1 flex'><img src='/icons/divython.svg' width='20px' className='mr-2'></img>Python</div>
+                <div className='my-2 flex'><img src='/icons/node-js.svg' width='20px' className='mr-2'></img>Node.js</div>
+                <div className='my-2 flex'><img src='/icons/next-js.svg' width='20px' className='mr-2 z-10'></img><div className='bg-white ml-[-28px] w-5 h-4 mt-1 z-0 rounded-xl mr-2'></div>Next.js</div>
+                <div className='my-2 flex'><img src='/icons/tailwind-css.svg' width='20px' className='mr-2'></img>Tailwind CSS</div>
               </div>
             </div>
             <div className={`${isDarkMode && 'bg-background1'}`}>
